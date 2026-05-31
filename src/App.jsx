@@ -100,17 +100,19 @@ function App() {
 Your task is to analyze it, extract the candidate's core details, and rewrite the CV to perfectly match Canadian ATS standards.
 Rules:
 - Remove all personal/discriminatory information (photo, age, marital status, religion).
-- Use standard Canadian headings (e.g., "Professional Experience", "Education", "Skills", "Languages").
+- TRANSLATE AND WRITE EVERYTHING IN FRENCH. The entire output MUST be in French.
+- Use ONLY French headings: "Résumé Exécutif", "Expérience Professionnelle", "Éducation", "Compétences", "Langues". DO NOT use English headings like "Executive Summary" or "Professional Experience".
 - Ensure bullet points are clear, action-oriented, and formatted properly in Markdown.
-- Add an "Executive Summary" at the top based on their experience.
+- Add a "Résumé Exécutif" at the top based on their experience.
 - Generate a highly professional, well-structured Canadian cover letter tailored to their most recent role. Format the cover letter in Markdown: put the candidate's name as a # Heading 1 at the top, followed by contact info, date, hiring manager/company details, and beautifully spaced body paragraphs.
+- IMPORTANT: The entire generated content, including all headings, body text, bullet points, and the cover letter, MUST be entirely in French (Français), regardless of the language of the original text.
 
 You MUST respond with a JSON object exactly matching this schema:
 {
   "score": number (0-100 representing how highly optimized the output is for ATS),
-  "improvements": [string, string, string, string] (List 4-5 key improvements you made to align with Canadian standards),
-  "optimized_content": string (The FULL optimized CV formatted beautifully in Markdown. Put the candidate's name as a # Heading 1 at the top, followed by contact info),
-  "cover_letter": string (The FULL professional cover letter formatted beautifully in Markdown, including the # Heading 1 for the name at the top)
+  "improvements": [string, string, string, string] (List 4-5 key improvements you made to align with Canadian standards, written in French),
+  "optimized_content": string (The FULL optimized CV formatted beautifully in Markdown. Put the candidate's name as a # Heading 1 at the top, followed by contact info, written entirely in French),
+  "cover_letter": string (The FULL professional cover letter formatted beautifully in Markdown, including the # Heading 1 for the name at the top, written entirely in French)
 }`
             },
             {
